@@ -1,0 +1,21 @@
+﻿@using WebApplication1.Models
+
+@{
+    List<Product> products = ViewBag.Products;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <ul>
+        @foreach (var product in products)
+        {
+            <li>Model : @product.Model-Year : @product.Year- Description : @product.Description</li>
+        }
+    </ul>
+</body>
+</html>
